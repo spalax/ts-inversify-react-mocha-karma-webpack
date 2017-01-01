@@ -48,7 +48,7 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
 	var Button_1 = __webpack_require__(178);
-	ReactDOM.render(React.createElement(Button_1.Button, { id: "id-button", name: "name-button" }), document.getElementById("example"));
+	ReactDOM.render(React.createElement(Button_1.default, { id: "id-button", name: "name-button" }), document.getElementById("example"));
 
 
 /***/ },
@@ -21493,7 +21493,8 @@
 	    };
 	    return Button;
 	}(React.Component));
-	exports.Button = Button;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Button;
 
 
 /***/ },

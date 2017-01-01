@@ -19,10 +19,11 @@ var Button = (function (_super) {
         this.setState({ currentEvent: e.type });
     };
     Button.prototype.render = function () {
-        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.red, name: this.props.name, id: this.props.id }, this.state.currentEvent));
+        return (<button onClick={this.update} onDoubleClick={this.update} className={styles.red} name={this.props.name} id={this.props.id}>
+                {this.state.currentEvent}
+            </button>);
     };
     return Button;
 }(React.Component));
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Button;
-//# sourceMappingURL=Button.js.map

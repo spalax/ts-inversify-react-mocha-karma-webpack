@@ -3,10 +3,11 @@
 import * as React from "react";
 import * as styles from "./styles/button.css";
 
+
 type State = { currentEvent: string }
 type Props = { name: string; id: string }
 
-export class Button extends React.Component<Props, State> {
+class Button extends React.Component<Props, State> {
     constructor() {
         super();
         this.state = {currentEvent: "---"};
@@ -29,3 +30,5 @@ export class Button extends React.Component<Props, State> {
         )
     }
 }
+
+export default Button;
