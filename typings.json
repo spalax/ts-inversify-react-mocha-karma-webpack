@@ -1,12 +1,11 @@
 {
-  "name": "terraleads-dummy",
+  "name": "start-app",
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160723033700",
     "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20161229235626",
     "sinon": "registry:npm/sinon#1.16.0+20160723033700"
   },
   "globalDependencies": {
-    "greensock": "registry:dt/greensock#1.15.1+20161130005133",
     "mocha": "registry:dt/mocha#2.2.5+20161221010438"
   }
 }

@@ -18,17 +18,17 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            { test: /\.css$/,
-              loader: ExtractTextPlugin.extract('style',
-                                                'css?modules&importLoaders=1&' +
-                                                'localIdentName=[name]__[local]___[hash:base64:5]')
+            { test: /\.pcss$/,
+              loader: ExtractTextPlugin.extract(['css?modules&importLoaders=1&' +
+                                                 'localIdentName=[name]-[local]',
+                                                 'postcss-loader'])
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
             { test: /\.jpg$/, loader: "file-loader" }
         ],
         preLoaders: [
             {
-                test: /\.css$/,
+                test: /\.pcss$/,
                 exclude: /node_modules/,
                 loader: 'typed-css-modules?searchDir=src/&camelCase'
             },
@@ -41,4 +41,4 @@ module.exports = {
             allChunks: true
         })
     ]
-}
+};

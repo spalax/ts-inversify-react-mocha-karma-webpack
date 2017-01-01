@@ -1,5 +1,4 @@
 {
-//    "extends": ["tslint:latest", "tslint-react"],
     "jsRules": {
         "class-name": true,
         "comment-format": [
@@ -68,8 +67,6 @@
             true,
             "double"
         ],
-        // enable tslint-react rules here
-//        "jsx-no-lambda": true,
         "triple-equals": [
             true,
             "allow-null-check"

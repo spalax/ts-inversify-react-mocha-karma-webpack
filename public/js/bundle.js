@@ -21489,7 +21489,7 @@
 	        this.setState({ currentEvent: e.type });
 	    };
 	    Button.prototype.render = function () {
-	        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.red, name: this.props.name, id: this.props.id }, this.state.currentEvent));
+	        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.el, name: this.props.name, id: this.props.id }, this.state.currentEvent));
 	    };
 	    return Button;
 	}(React.Component));
@@ -21502,7 +21502,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"red":"button__red___1pFbZ"};
+	module.exports = {"el":"button-el"};
 
 /***/ }
 /******/ ]);

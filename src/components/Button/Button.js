@@ -6,7 +6,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require("react");
-var styles = require("./styles/button.css");
+var styles = require("./styles/button.pcss");
 var Button = (function (_super) {
     __extends(Button, _super);
     function Button() {
@@ -19,7 +19,7 @@ var Button = (function (_super) {
         this.setState({ currentEvent: e.type });
     };
     Button.prototype.render = function () {
-        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.red, name: this.props.name, id: this.props.id }, this.state.currentEvent));
+        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.el, name: this.props.name, id: this.props.id }, this.state.currentEvent));
     };
     return Button;
 }(React.Component));

@@ -1,8 +1,7 @@
 /// <reference path="../../../typings/index.d.ts" />
 
 import * as React from "react";
-import * as styles from "./styles/button.css";
-
+import * as styles from "./styles/button.pcss";
 
 type State = { currentEvent: string }
 type Props = { name: string; id: string }
@@ -22,7 +21,7 @@ class Button extends React.Component<Props, State> {
         return (
             <button onClick = {this.update}
                     onDoubleClick={this.update}
-                    className = {styles.red}
+                    className = {styles.el}
                     name = {this.props.name}
                     id = {this.props.id}>
                 {this.state.currentEvent}
