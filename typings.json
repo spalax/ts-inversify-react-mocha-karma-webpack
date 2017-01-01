@@ -1,0 +1,9 @@
+{
+  "name": "terraleads-dummy",
+  "dependencies": {
+    "requirejs-domready": "registry:dt/requirejs-domready#2.0.1+20160620211513"
+  },
+  "globalDependencies": {
+    "greensock": "registry:dt/greensock#1.15.1+20161130005133"
+  }
+}
