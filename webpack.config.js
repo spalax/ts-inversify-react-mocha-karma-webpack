@@ -11,11 +11,16 @@ module.exports = {
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
     resolve: {
+        alias: {
+            sinon: path.resolve(__dirname, 'node_modules/sinon/lib/sinon.js') // require dist version instead
+        },
         // Add `.ts` and `.tsx` as a resolvable extension.
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.pcss']
     },
-    devServer: { inline: true },
     module: {
+        noParse: [
+            /node_modules\/sinon$/
+        ],
         loaders: [
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             { test: /\.pcss$/,
@@ -24,7 +29,11 @@ module.exports = {
                                                  'postcss-loader'])
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
-            { test: /\.jpg$/, loader: "file-loader" }
+            { test: /\.jpg$/, loader: "file-loader" },
+            {
+                test: /\.json$/,
+                loader: 'json'
+            }
         ],
         preLoaders: [
             {
@@ -40,5 +49,12 @@ module.exports = {
         new ExtractTextPlugin('../css/app.css', {
             allChunks: true
         })
-    ]
+    ],
+    externals: {
+        'jsdom': 'window',
+        'cheerio': 'window',
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true,
+        'react/addons': true
+    }
 };

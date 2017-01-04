@@ -10,7 +10,7 @@ describe("Button", () => {
 
     beforeEach(() => {
         renderer = TestUtils.createRenderer();
-        renderer.render(<Button name="Willson" id="My-Id" />);
+        renderer.render(<Button />);
     });
 
     it("should render correctly", () => {
@@ -21,12 +21,6 @@ describe("Button", () => {
     it("should have correct prop values", () => {
         const result = renderer.getRenderOutput();
         const propValues = result.props.children;
-        chai.assert.strictEqual(propValues, "---");
-    });
-
-    it ("should have correct name and id", () => {
-        const result = renderer.getRenderOutput();
-        chai.assert.strictEqual(result.props.name, "Willson");
-        chai.assert.strictEqual(result.props.id, "My-Id");
+        chai.assert.strictEqual(propValues, 0);
     });
 });

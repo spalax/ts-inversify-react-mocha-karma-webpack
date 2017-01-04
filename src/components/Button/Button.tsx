@@ -3,28 +3,36 @@
 import * as React from "react";
 import * as styles from "./styles/button.pcss";
 
-type State = { currentEvent: string }
-type Props = { name: string; id: string }
+type State = { val: number }
 
-class Button extends React.Component<Props, State> {
+class Button extends React.Component<{}, State> {
     constructor() {
         super();
-        this.state = {currentEvent: "---"};
+        this.state = {val: 0};
         this.update = this.update.bind(this);
     }
 
-    update(e: {type: string}) {
-        this.setState({currentEvent: e.type})
+    componentWillMount() {
+        console.log("Component will mount");
+    }
+
+    update() {
+        this.setState({val: this.state.val + 1});
+    }
+
+    componentDidMount() {
+        console.log("Component did mount");
+    }
+
+    componentWillUnmount() {
+        console.log("Component will unmount");
     }
 
     render() {
         return (
             <button onClick = {this.update}
-                    onDoubleClick={this.update}
-                    className = {styles.el}
-                    name = {this.props.name}
-                    id = {this.props.id}>
-                {this.state.currentEvent}
+                    className = {styles.el}>
+                {this.state.val}
             </button>
         )
     }

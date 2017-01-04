@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import Button from "./components/Button/Button";
+import App from "./components/App/App";
 
 ReactDOM.render(
-    <Button id="id-button" name="name-button" />,
+    <App />,
     document.getElementById("example")
 );

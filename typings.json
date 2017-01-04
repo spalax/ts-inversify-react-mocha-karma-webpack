@@ -2,6 +2,7 @@
   "name": "start-app",
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160723033700",
+    "enzyme": "registry:npm/enzyme#2.2.0+20160322031343",
     "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20161229235626",
     "sinon": "registry:npm/sinon#1.16.0+20160723033700"
   },

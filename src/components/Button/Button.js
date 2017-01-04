@@ -11,15 +11,24 @@ var Button = (function (_super) {
     __extends(Button, _super);
     function Button() {
         var _this = _super.call(this) || this;
-        _this.state = { currentEvent: "---" };
+        _this.state = { val: 0 };
         _this.update = _this.update.bind(_this);
         return _this;
     }
-    Button.prototype.update = function (e) {
-        this.setState({ currentEvent: e.type });
+    Button.prototype.componentWillMount = function () {
+        console.log("Component will mount");
+    };
+    Button.prototype.update = function () {
+        this.setState({ val: this.state.val + 1 });
+    };
+    Button.prototype.componentDidMount = function () {
+        console.log("Component did mount");
+    };
+    Button.prototype.componentWillUnmount = function () {
+        console.log("Component will unmount");
     };
     Button.prototype.render = function () {
-        return (React.createElement("button", { onClick: this.update, onDoubleClick: this.update, className: styles.el, name: this.props.name, id: this.props.id }, this.state.currentEvent));
+        return (React.createElement("button", { onClick: this.update, className: styles.el }, this.state.val));
     };
     return Button;
 }(React.Component));

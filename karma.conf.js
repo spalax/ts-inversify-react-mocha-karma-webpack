@@ -103,7 +103,8 @@ module.exports = function(config) {
         webpack: {
             module: webpackConfig.module,
             resolve: webpackConfig.resolve,
-            plugins: webpackConfig.plugins
+            plugins: webpackConfig.plugins,
+            externals: webpackConfig.externals
         }
     });
 };
